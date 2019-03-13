@@ -1,6 +1,6 @@
 // region Imports
-import {Address} from './address';
-import {Review} from './review';
+import { Address } from './address';
+import { Review } from './review';
 // endregion
 
 export class Restaurant {

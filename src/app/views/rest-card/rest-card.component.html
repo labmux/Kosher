@@ -1,3 +1,22 @@
-<p>
-  rest-card works!
-</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{resto.name | uppercase}}</mat-card-title>
+    <mat-card-subtitle>
+      Call us <a href="tel: {{resto.phone}}">{{ resto.phone}}</a> or
+
+      <span *ngIf="resto.website">
+        Go to the <a href="{{resto.website}}" target="_blank">{{resto.name | lowercase}}</a>
+      </span>
+      Now: {{now | date}}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p></p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

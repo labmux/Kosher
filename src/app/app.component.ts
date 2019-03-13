@@ -1,19 +1,31 @@
 import { Component } from '@angular/core';
+import {Restaurant} from './models/restaurant';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements onInit{
-  title = 'Kosher';
-  cardTitle = 'My First Card';
-  cardSubtitle = 'But wtv';
-  cardContent = 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.\n' +
-      '        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\n' +
-      '        bred for hunting';
+export class AppComponent {
+  rests: Restaurant[];
 
-  ngOnInit():void {
-    this.title = 'WOW';
-  }
+  constructor() {
+    this.rests = [];
+    let temp = new Restaurant();
+    temp.name = 'Tav Cafe';
+    temp.website = 'http://www.cafetav.com';
+    temp.phone = '514-333-1212';
+    temp.rating = 5;
+    temp.priceRange = 10;
+    this.rests.push(temp);
+
+    temp = new Restaurant();
+    temp.name = 'Balbale';
+    temp.website = 'http://www.google.com';
+    temp.phone = '514-322-1122';
+    temp.rating = 3;
+    temp.priceRange = 15;
+    this.rests.push(temp);
+   }
+
 }
