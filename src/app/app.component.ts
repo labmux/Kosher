@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements onInit{
   title = 'Kosher';
   cardTitle = 'My First Card';
   cardSubtitle = 'But wtv';
@@ -13,4 +13,7 @@ export class AppComponent {
       '        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\n' +
       '        bred for hunting';
 
+  ngOnInit():void {
+    this.title = 'WOW';
+  }
 }
