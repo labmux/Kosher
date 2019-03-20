@@ -9,9 +9,19 @@ export class Restaurant {
     website: string;
     phone: string;
     rating: number;
-    priceRange: number;
+    avgMealPrice: number;
     reviews: Review[];
     location: Address;
     // endregion
+
+    constructor(args?) {
+        if (args) {
+            this.name = args.name;
+            this.website = args.website;
+            this.phone = args.phone;
+            this.rating = args.rating;
+            this.avgMealPrice = args.avgMealPrice;
+        }
+    }
 }
 
